@@ -23,5 +23,14 @@ $expression.addEventListener('change', e => {
 });
 
 $run.addEventListener('click', e => {
-    $result.innerHTML = operations[state.operation](state.expression);
+    const operation = operations[state.operation];
+    if(operation){
+        try {
+            $result.innerHTML = operation(state.expression);
+        } catch (e) {
+            $result.innerHTML = e.message;
+        };
+    } else {
+        $result.innerHTML = 'feature comming soon...';
+    };
 });
