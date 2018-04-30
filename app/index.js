@@ -27,8 +27,10 @@ $run.addEventListener('click', e => {
     if(operation){
         try {
             $result.innerHTML = operation(state.expression);
+            $result.classList.remove('error');
         } catch (e) {
             $result.innerHTML = e.message;
+            $result.classList.add('error');
         };
     } else {
         $result.innerHTML = 'feature comming soon...';

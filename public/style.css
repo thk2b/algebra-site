@@ -1,3 +1,39 @@
-body{
+body {
     font-family: Cambria, Georgia, serif;
+    margin: 0;
+    font-size: 20px;
+}
+header h1 {
+    text-align: center;
+}
+
+section {
+    padding: 20px 10px 0 10px;
+}
+
+section.input input {
+    width: 100%;
+}
+
+section.input * {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+section p {
+    height: 100%;
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+@media screen and (min-width: 480px) {
+    section {
+        padding: 20px 20px 0 20px;
+    }
+    section.input input {
+        width: initial;
+    }
 }
