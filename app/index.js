@@ -14,15 +14,7 @@ const state = {
     expression: ''
 };
 
-$operation.addEventListener('change', e => {
-    state.operation = $operation.value;
-});
-
-$expression.addEventListener('change', e => {
-    state.expression = $expression.value;
-});
-
-$run.addEventListener('click', e => {
+function handleRun(){
     const operation = operations[state.operation];
     if(operation){
         try {
@@ -35,4 +27,21 @@ $run.addEventListener('click', e => {
     } else {
         $result.innerHTML = 'feature comming soon...';
     };
+}
+
+$operation.addEventListener('change', e => {
+    state.operation = $operation.value;
+});
+$expression.addEventListener('keydown', e => {
+    if(e.key === 'Enter'){
+        handleRun()
+    };
+});
+
+$expression.addEventListener('change', e => {
+    state.expression = $expression.value;
+});
+
+$run.addEventListener('click', e => {
+    handleRun();
 });
