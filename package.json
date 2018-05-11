@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/thk2b/algebra-site#readme",
   "dependencies": {
-    "@thk2b/algebra": "0.1.1"
+    "@thk2b/algebra": "0.2.5"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
